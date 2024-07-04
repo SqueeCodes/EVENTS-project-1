@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   background-color: #242424;
-  font-family: "Kanit", "san serif";
+  font-family: "Kanit", "sans-serif";
 }
 
 li {
@@ -19,17 +19,14 @@ button {
 
 .container {
   padding: 24px;
-  
 }
 
 .row {
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
-  
 }
 
 /*NAVIGATION*/
-
 
 .logo__wrapper {
   padding-top: 16px;
@@ -64,7 +61,6 @@ button {
   font-weight: 500;
   color: #fff;
   margin-right: 24px;
-
 }
 
 /* Btn Menu */
@@ -92,15 +88,17 @@ button {
 }
 .btnmenu:hover {
   background-color: transparent;
+  color: rgb(241, 20, 193);
 }
-.menubackdrop {
+.menu__backdrop {
   position: fixed;
-  background-color: white;
+  background-color: #242424;
   top: 0;
-  left: 0;
   bottom: 0;
   right: 0;
   z-index: 99;
+  width: 100%;
+  max-width: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +126,7 @@ button {
   font-size: 1.5rem;
   color: rgb(79, 85, 93);
   border: 2px solid transparent;
-  transition: all 150ms ease;
+  transition: all 400ms ease;
   padding-bottom: 0.5rem;
   line-height: 1.5rem;
 }
@@ -137,17 +135,14 @@ button {
   line-height: 1.5rem;
 }
 .menulink:hover {
-  color: rgb(71, 13, 188);
-  border-bottom: 2px solid rgb(71, 13, 188);
+  color: rgb(241, 20, 193);
   cursor: no-drop;
 }
 .menulink--btn:hover {
   border-bottom: none;
   cursor: no-drop;
 }
-.btnmenu:hover {
-  color: rgb(71, 13, 188);
-}
+
 .btnmenu--close {
   position: absolute;
   right: 20px;
@@ -172,7 +167,6 @@ body.menu--open .menu__backdrop {
 }
 
 @media (max-width: 1024px) {
-
   .btn__menu {
     display: block;
   }
@@ -188,7 +182,7 @@ body.menu--open .menu__backdrop {
     right: 12px;
   }
 
-  .menubackdrop {
+  .menu__backdrop {
     visibility: hidden;
     opacity: 0;
     transform: translateX(100%);
@@ -201,5 +195,4 @@ body.menu--open .menu__backdrop {
   .nav-bar__links {
     display: none;
   }
-
 }
