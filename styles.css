@@ -1,4 +1,21 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  background-color: black;
+}
+
+.logo {
+  width: 6rem;
+  position: absolute;
+}
+
+.nav-bar__wrapper {
+  margin: 24px;
+}
+
+.nav-bar__link {
+  color: #fff;
+}
+.nav-bar__link li {
+  color: #fff;
 }
