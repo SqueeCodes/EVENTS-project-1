@@ -119,6 +119,12 @@ button {
 .fa-bars {
   color: #fff;
   font-size: 24px;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  color: #f114c1;
 }
 
 .btnmenu {
@@ -131,6 +137,7 @@ button {
   margin: 12px 16px;
   padding: 12px auto;
   display: none;
+  cursor: pointer;
 }
 
 .btnmenu:hover {
