@@ -13,6 +13,21 @@ a {
   text-decoration: none;
 }
 
+button {
+  border-style: none;
+}
+
+.container {
+  padding: 24px;
+  
+}
+
+.row {
+  max-width: 1280px;
+  margin: 0 auto;
+  
+}
+
 /*NAVIGATION*/
 
 
@@ -22,9 +37,7 @@ a {
 
 .logo {
   width: 6rem;
-  /* position: absolute; */
 }
-
 
 .nav-bar__wrapper {
   margin: 24px;
@@ -33,7 +46,6 @@ a {
   justify-content: space-between;
   align-items: center;
   height: 15vh;
-
 }
 
 .nav-bar__links {
@@ -47,11 +59,147 @@ a {
   justify-content: space-around;
 }
 
-
 .nav-bar__link {
   font-size: 18px;
   font-weight: 500;
   color: #fff;
   margin-right: 24px;
+
+}
+
+/* Btn Menu */
+
+.btn__menu {
+  display: none;
+  /* background-color: #fff; */
+}
+
+.fa-bars {
+  color: #fff;
+  font-size: 24px;
+}
+
+.btnmenu {
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  color: rgb(221, 214, 214);
+  margin: 12px 16px;
+  padding: 12px auto;
+  display: none;
+}
+.btnmenu:hover {
+  background-color: transparent;
+}
+.menubackdrop {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease;
+  transform: translateX(100%);
+  border: 2px solid rgb(226, 232, 240);
+  border-radius: 8px;
+  margin: 1.5rem 1rem;
+  height: fit-content;
+  padding: 2rem;
+}
+.menulinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menulist {
+  padding: 12px 0;
+  margin: 0 auto;
+}
+.menulink {
+  font-size: 1.5rem;
+  color: rgb(79, 85, 93);
+  border: 2px solid transparent;
+  transition: all 150ms ease;
+  padding-bottom: 0.5rem;
+  line-height: 1.5rem;
+}
+.menulink--btn {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.menulink:hover {
+  color: rgb(71, 13, 188);
+  border-bottom: 2px solid rgb(71, 13, 188);
+  cursor: no-drop;
+}
+.menulink--btn:hover {
+  border-bottom: none;
+  cursor: no-drop;
+}
+.btnmenu:hover {
+  color: rgb(71, 13, 188);
+}
+.btnmenu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: rgb(160, 174, 192);
+}
+.btnmenu--close:active {
+  color: rgb(71, 13, 188);
+}
+body.menu--open .menu__backdrop {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0;
+  pointer-events: auto;
+}
+.menu--open {
+  overflow: hidden;
+  visibility: visible;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+
+  .btn__menu {
+    display: block;
+  }
+
+  .btnmenu {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-items: center;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  .menubackdrop {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  .menulink {
+    font-size: 1.5rem;
+  }
+
+  .nav-bar__links {
+    display: none;
+  }
 
 }
