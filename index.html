@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <p> Hello, my name is Lindsey Lohan!</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0af1f50848.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <title>Squee-Kitty Event-Finder</title>
+  </head>
+  <body>
+    <section id="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="nav-bar__wrapper">
+            <div class="logo__wrapper">
+              <figure>
+                <img class="logo" src="/assets/Logo White.PNG" alt="" />
+              </figure>
+            </div>
+            <div class="nav-bar__links">
+              <ul class="nav-bar__links--list">
+                <li class="link__box">
+                  <a class="nav-bar__link" href="#">Location</a>
+                </li>
+                <li class="link__box">
+                  <a class="nav-bar__link" href="#">Venues</a>
+                </li>
+                <li class="link__box">
+                  <a class="nav-bar__link" href="#">Events</a>
+                </li>
+                <li class="link__box">
+                  <a class="nav-bar__link" href="#">Contact Us</a>
+                </li>
+                <li class="link__box">
+                  <a class="nav-bar__link" href="#">Login</a>
+                </li>
+                <li>
+                  <button class="btn__sign--up">
+                    <a class="nav-bar__link" href="#">Sign Up</a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <button class="btn__menu" onclick="openMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+              <button class="btnmenu btnmenu--close" onclick="closeMenu()">
+                <i class="fas fa-times"></i>
+              </button>
+              <ul class="menulinks">
+                <li class="menulist">
+                  <a href="#landing" class="menulink" onclick="closeMenu()"
+                    >Location</a
+                  >
+                </li>
+                <li class="menulist">
+                  <a href="#features" class="menulink" onclick="closeMenu()"
+                    >Venues</a
+                  >
+                </li>
+                <li class="menulist">
+                  <a class="menulink" onclick="closeMenu()">Events</a>
+                </li>
+              </ul>
+              <ul class="menulinks">
+                <li class="menulist">
+                  <a class="menulink" onclick="closeMenu()">Contact Us</a>
+                </li>
+                <li class="menulist">
+                  <a class="menulink" onclick="closeMenu()">Login</a>
+                </li>
+                <li class="menulist">
+                  <a class="menulink--btn" onclick="closeMenu()"
+                    ><button class="menu__link--btn">Sign Up</button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
