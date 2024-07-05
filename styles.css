@@ -87,6 +87,7 @@ button {
 .link__box {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   width: fit-content;
   height: fit-content;
@@ -159,16 +160,19 @@ button {
   color: #fff;
   transition: all 400ms ease;
   display: inline-block;
-  text-shadow: 0 8px 16px black;
+  text-shadow: none;
   transition: all 400ms ease;
+  text-shadow: 4px 8px 8px black;
 }
 
 .nav-bar__link:hover {
   color: #f114c1;
-  text-shadow: none;
+  text-shadow: -16px -20px 24px #fff, 16px -20px 24px #fff, -16px 20px 24px #fff,
+    16px 20px 24px #fff;
 }
 
 .btn__sign--up {
+  overflow: hidden;
   padding: 0;
   margin: 0;
   background-color: #7f0865;
