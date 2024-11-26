@@ -374,6 +374,13 @@ button {
   transform: translateY(-2px);
 }
 
+/* Page Information */
+.page__information {
+  margin: 16px;
+  padding: 16px;
+  color: white;
+}
+
 /* Media Query */
 @media (max-width: 480px) {
   #navigation {
