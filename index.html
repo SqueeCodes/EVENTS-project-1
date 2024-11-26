@@ -22,7 +22,11 @@
         <div class="nav-bar__wrapper">
           <div class="logo__wrapper">
             <figure>
-              <img class="logo" src="/assets/Logo White.PNG" alt="Squee-Kitty Logo" />
+              <img
+                class="logo"
+                src="/assets/Logo White.PNG"
+                alt="Squee-Kitty Logo"
+              />
             </figure>
           </div>
 
@@ -37,7 +41,9 @@
               <a class="nav-bar__link" href="#">Events</a>
             </li>
             <li class="link__box">
-              <a id="openModalBtn" class="nav-bar__link" onclick="openModal()">Contact Us</a>
+              <a id="openModalBtn" class="nav-bar__link" onclick="openModal()"
+                >Contact Us</a
+              >
             </li>
             <li class="link__box">
               <a class="nav-bar__link" href="#">Login</a>
@@ -61,62 +67,77 @@
             </button>
             <ul class="menulinks">
               <li class="menulist">
-                <a href="#landing" class="menulink" onclick="closeMenu()">Location</a>
+                <a href="#landing" class="menulink" onclick="closeMenu()"
+                  >Location</a
+                >
               </li>
               <li class="menulist">
-                <a href="#features" class="menulink" onclick="closeMenu()">Venues</a>
+                <a href="#features" class="menulink" onclick="closeMenu()"
+                  >Venues</a
+                >
               </li>
               <li class="menulist">
-                <a href="#events" class="menulink" onclick="closeMenu()">Events</a>
+                <a href="#events" class="menulink" onclick="closeMenu()"
+                  >Events</a
+                >
               </li>
               <li class="menulist">
-                <a class="menulink" id="mobileContactBtn" onclick="openModal(); closeMenu()">Contact Us</a>
+                <a
+                  class="menulink"
+                  id="mobileContactBtn"
+                  onclick="openModal(); closeMenu()"
+                  >Contact Us</a
+                >
               </li>
               <li class="menulist">
                 <a class="menulink" onclick="closeMenu()">Login</a>
               </li>
               <li class="menulist">
-                <button class="menu__link--btn" onclick="closeMenu()">Sign Up</button>
+                <button class="menu__link--btn" onclick="closeMenu()">
+                  Sign Up
+                </button>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+    </div>
 
-      <!-- Contact Us Modal -->
-      <div id="contactModal" class="modal">
-        <div class="modal__content">
-          <span id="closeModalBtn" class="close" onclick="closeModal()">&times;</span>
-          <h2 class="modal__title">Contact Us</h2>
-          <p class="modal__para">We want to hear from you!</p>
-          <form id="contactForm" class="modal__form">
-            <label for="name" class="modal__label">Name</label>
-            <input
-              id="name"
-              class="modal__item"
-              type="text"
-              name="name"
-              required
-            />
-            <label for="email" class="modal__label">Email</label>
-            <input
-              id="email"
-              class="modal__item"
-              type="email"
-              name="email"
-              required
-            />
-            <label for="message" class="modal__label">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              required
-              class="modal__item modal__item--textbox"
-            ></textarea>
-            <button class="modal__btn" type="submit">Submit</button>
-          </form>
-        </div>
+    <!-- Contact Us Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal__content">
+        <span id="closeModalBtn" class="close" onclick="closeModal()"
+          >&times;</span
+        >
+        <h2 class="modal__title">Contact Us</h2>
+        <p class="modal__para">We want to hear from you!</p>
+        <form id="contactForm" class="modal__form">
+          <label for="name" class="modal__label">Name</label>
+          <input
+            id="name"
+            class="modal__item"
+            type="text"
+            name="name"
+            required
+          />
+          <label for="email" class="modal__label">Email</label>
+          <input
+            id="email"
+            class="modal__item"
+            type="email"
+            name="email"
+            required
+          />
+          <label for="message" class="modal__label">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="modal__item modal__item--textbox"
+          ></textarea>
+          <button class="modal__btn" type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </body>
