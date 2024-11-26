@@ -10,83 +10,114 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700&display=swap");
     </style>
     <title>Squee-Kitty Event-Finder</title>
   </head>
   <body>
-    <section id="navigation">
-      <div class="container">
-        <div class="row">
-          <div class="nav-bar__wrapper">
-            <div class="logo__wrapper">
-              <figure>
-                <img class="logo" src="/assets/Logo White.PNG" alt="" />
-              </figure>
-            </div>
-            <div class="nav-bar__links">
-              <ul class="nav-bar__links--list">
-                <li class="link__box">
-                  <a class="nav-bar__link" href="#">Location</a>
-                </li>
-                <li class="link__box">
-                  <a class="nav-bar__link" href="#">Venues</a>
-                </li>
-                <li class="link__box">
-                  <a class="nav-bar__link" href="#">Events</a>
-                </li>
-                <li class="link__box">
-                  <a class="nav-bar__link" href="#">Contact Us</a>
-                </li>
-                <li class="link__box">
-                  <a class="nav-bar__link" href="#">Login</a>
-                </li>
-                <li>
-                  <button class="btn__sign--up">
-                    <a class="nav-bar__link" href="#">Sign Up</a>
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <button class="btn__menu" onclick="openMenu()">
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="menu__backdrop">
-              <button class="btnmenu btnmenu--close" onclick="closeMenu()">
-                <i class="fas fa-times"></i>
+    <!-- Main Content -->
+    <div id="pageContent">
+      <!-- Navigation Section -->
+      <nav id="navigation" class="container">
+        <div class="nav-bar__wrapper">
+          <div class="logo__wrapper">
+            <figure>
+              <img class="logo" src="/assets/Logo White.PNG" alt="Squee-Kitty Logo" />
+            </figure>
+          </div>
+
+          <ul class="nav-bar__links--list">
+            <li class="link__box">
+              <a class="nav-bar__link" href="#">Location</a>
+            </li>
+            <li class="link__box">
+              <a class="nav-bar__link" href="#">Venues</a>
+            </li>
+            <li class="link__box">
+              <a class="nav-bar__link" href="#">Events</a>
+            </li>
+            <li class="link__box">
+              <a id="openModalBtn" class="nav-bar__link" onclick="openModal()">Contact Us</a>
+            </li>
+            <li class="link__box">
+              <a class="nav-bar__link" href="#">Login</a>
+            </li>
+            <li>
+              <button class="btn__sign--up">
+                <a class="nav-bar__link" href="#">Sign Up</a>
               </button>
-              <ul class="menulinks">
-                <li class="menulist">
-                  <a href="#landing" class="menulink" onclick="closeMenu()"
-                    >Location</a
-                  >
-                </li>
-                <li class="menulist">
-                  <a href="#features" class="menulink" onclick="closeMenu()"
-                    >Venues</a
-                  >
-                </li>
-                <li class="menulist">
-                  <a class="menulink" onclick="closeMenu()">Events</a>
-                </li>
-              </ul>
-              <ul class="menulinks">
-                <li class="menulist">
-                  <a class="menulink" onclick="closeMenu()">Contact Us</a>
-                </li>
-                <li class="menulist">
-                  <a class="menulink" onclick="closeMenu()">Login</a>
-                </li>
-                <li class="menulist">
-                  <a class="menulink--btn" onclick="closeMenu()"
-                    ><button class="menu__link--btn">Sign Up</button></a
-                  >
-                </li>
-              </ul>
-            </div>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Mobile Menu -->
+          <div class="menu__backdrop">
+            <button class="btnmenu btnmenu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menulinks">
+              <li class="menulist">
+                <a href="#landing" class="menulink" onclick="closeMenu()">Location</a>
+              </li>
+              <li class="menulist">
+                <a href="#features" class="menulink" onclick="closeMenu()">Venues</a>
+              </li>
+              <li class="menulist">
+                <a href="#events" class="menulink" onclick="closeMenu()">Events</a>
+              </li>
+              <li class="menulist">
+                <a class="menulink" id="mobileContactBtn" onclick="openModal(); closeMenu()">Contact Us</a>
+              </li>
+              <li class="menulist">
+                <a class="menulink" onclick="closeMenu()">Login</a>
+              </li>
+              <li class="menulist">
+                <button class="menu__link--btn" onclick="closeMenu()">Sign Up</button>
+              </li>
+            </ul>
           </div>
         </div>
+      </nav>
+
+      <!-- Contact Us Modal -->
+      <div id="contactModal" class="modal">
+        <div class="modal__content">
+          <span id="closeModalBtn" class="close" onclick="closeModal()">&times;</span>
+          <h2 class="modal__title">Contact Us</h2>
+          <p class="modal__para">We want to hear from you!</p>
+          <form id="contactForm" class="modal__form">
+            <label for="name" class="modal__label">Name</label>
+            <input
+              id="name"
+              class="modal__item"
+              type="text"
+              name="name"
+              required
+            />
+            <label for="email" class="modal__label">Email</label>
+            <input
+              id="email"
+              class="modal__item"
+              type="email"
+              name="email"
+              required
+            />
+            <label for="message" class="modal__label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="modal__item modal__item--textbox"
+            ></textarea>
+            <button class="modal__btn" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>
