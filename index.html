@@ -56,14 +56,24 @@
           </ul>
 
           <!-- Mobile Menu Button -->
-          <button class="btn__menu" onclick="openMenu()">
+          <button
+            class="btn__menu"
+            type="button"
+            onclick="openMenu()"
+            aria-label="Open Mobile Menu"
+          >
             <i class="fas fa-bars"></i>
           </button>
 
           <!-- Mobile Menu -->
           <div class="menu__backdrop">
-            <button class="btnmenu btnmenu--close" onclick="closeMenu()">
-              <i class="fas fa-times"></i>
+            <button
+              class="btnmenu btnmenu--close"
+              type="button"
+              onclick="closeMenu()"
+              aria-label="Close Mobile Menu"
+            >
+              &times;
             </button>
             <ul class="menulinks">
               <li class="menulist">
@@ -85,15 +95,21 @@
                 <a
                   class="menulink"
                   id="mobileContactBtn"
+                  href="#"
                   onclick="openModal(); closeMenu()"
-                  >Contact Us</a
                 >
+                  Contact Us
+                </a>
               </li>
               <li class="menulist">
-                <a class="menulink" onclick="closeMenu()">Login</a>
+                <a class="menulink" href="#" onclick="closeMenu()">Login</a>
               </li>
               <li class="menulist">
-                <button class="menu__link--btn" onclick="closeMenu()">
+                <button
+                  class="menu__link--btn"
+                  type="button"
+                  onclick="closeMenu()"
+                >
                   Sign Up
                 </button>
               </li>
@@ -101,13 +117,28 @@
           </div>
         </div>
       </nav>
+
+      <!-- Search Bar and Info -->
       <section class="page__information">
         <div class="container">
           <div class="row">
             <h1 class="page__header">What's your vibe?</h1>
-            <p class="page__info">Music, Comedy, or something else?</p>
-            <form action="">
-              <input type="text">Search here.</form>
+            <p class="page__para">
+              Music, Comedy, or something else?<br />We'll help you find just
+              what you're looking for.<br />
+              No matter what it is, or where you are!
+            </p>
+            <form id="searchBar">
+              <div class="search__wrapper">
+                <input
+                  class="search__input"
+                  type="text"
+                  placeholder="Let's find it!"
+                  required
+                />
+                <button class="search__btn" type="submit">Search</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>

@@ -307,6 +307,16 @@ button {
   font-size: 48px;
   cursor: pointer;
   margin-right: 8px;
+  transition: all 400ms ease;
+}
+
+.close:hover {
+  color: #7f0865;
+}
+
+.close:active {
+  transform: translateY(-2px);
+  color: #7f0808;
 }
 
 .no-scroll {
@@ -374,11 +384,66 @@ button {
   transform: translateY(-2px);
 }
 
-/* Page Information */
+/* Search Bar and Info */
 .page__information {
   margin: 16px;
   padding: 16px;
   color: white;
+}
+
+.page__header {
+  font-size: 72px;
+}
+
+.page__para {
+  font-size: 24px;
+}
+
+
+.search__wrapper{
+border: solid 2px #f114c13e;
+width: fit-content;
+margin-top: 36px;
+padding: 12px;
+border-radius: 12px;
+transition: all 400ms ease;
+}
+
+.search__wrapper:hover {
+  border: solid 2px #7f0865;
+}
+
+.search__wrapper:active {
+  border: solid 2px #7f0808;
+}
+
+.search__input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.search__btn {
+  color: white;
+  font-size: 16px;
+  overflow: hidden;
+  background-color: #1e1c1c;
+  border: 2px solid #f114c13e;
+  border-radius: 8px;
+  transition: all 400ms;
+  padding: 8px 16px 8px 16px;
+  transition: all 400ms ease;
+}
+
+.search__btn:hover {
+  background-color: #7f0865;
+}
+
+.search__btn:active {
+  background-color: #7f0808;
+  transform: translateX(-2px);
 }
 
 /* Media Query */
