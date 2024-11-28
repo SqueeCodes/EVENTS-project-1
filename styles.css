@@ -432,7 +432,6 @@ transition: all 400ms ease;
   background-color: #1e1c1c;
   border: 2px solid #f114c13e;
   border-radius: 8px;
-  transition: all 400ms;
   padding: 8px 16px 8px 16px;
   transition: all 400ms ease;
 }
