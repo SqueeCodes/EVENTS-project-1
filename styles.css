@@ -269,13 +269,27 @@ button {
   transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
+  z-index: 1000;
 }
 
-.modal--active{
+.modal--active {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
+
+.modal__backdrop {
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  transition: all 400ms ease;
+  opacity: 0;
+}
+
 .modal--active #pageContent {
   visibility: hidden;
   transition: all 400ms ease;
@@ -399,21 +413,20 @@ button {
   font-size: 24px;
 }
 
-
-.search__wrapper{
-border: solid 2px #f114c13e;
-width: fit-content;
-margin-top: 36px;
-padding: 12px;
-border-radius: 12px;
-transition: all 400ms ease;
+.search__wrapper {
+  border: solid 2px #f114c13e;
+  width: fit-content;
+  margin-top: 36px;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 400ms ease;
 }
 
 .search__wrapper:hover {
   border: solid 2px #7f0865;
 }
 
-.search__wrapper:active {
+.search__wrapper:focus-within {
   border: solid 2px #7f0808;
 }
 
@@ -443,6 +456,83 @@ transition: all 400ms ease;
 .search__btn:active {
   background-color: #7f0808;
   transform: translateX(-2px);
+}
+
+/* Shapes */
+.shape {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  opacity: 0.25;
+  animation: shapeSpin 9600ms linear infinite reverse;
+  font-size: 24px;
+  z-index: -100;
+}
+
+@keyframes shapeSpin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.shape--0 {
+  top: 15vh;
+  left: 10vw;
+  color: #7f0808;
+}
+
+.shape--1 {
+  top: 15vh;
+  left: 50vw;
+  filter: grayscale(1);
+  color: #7f0865;
+}
+
+.shape--2 {
+  top: 15vh;
+  left: 90vw;
+  color: #f114c1;
+}
+
+.shape--3 {
+  top: 50vh;
+  left: 10vw;
+  filter: grayscale(1);
+  color: #7f0865;
+}
+
+.shape--4 {
+  top: 50vh;
+  left: 50vw;
+  color: #f114c1;
+}
+
+.shape--5 {
+  top: 50vh;
+  left: 90vw;
+  color: #7f0808;
+}
+
+.shape--6 {
+  top: 90vh;
+  left: 10vw;
+  color: #f114c1;
+}
+
+.shape--7 {
+  top: 90vh;
+  left: 50vw;
+  color: #7f0808;
+}
+
+.shape--8 {
+  top: 90vh;
+  left: 90vw;
+  filter: grayscale(1);
+  color: #7f0865;
 }
 
 /* Media Query */
