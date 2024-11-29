@@ -151,6 +151,16 @@ button {
   opacity: 1;
 }
 
+.link__box:active::after,
+.link__box:active::before {
+  background: transparent;
+  transform: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
 .link__box .nav-bar__link {
   z-index: 50;
 }
@@ -172,6 +182,12 @@ button {
   color: #f114c1;
   text-shadow: -16px -20px 24px #fff, 16px -20px 24px #fff, -16px 20px 24px #fff,
     16px 20px 24px #fff;
+}
+
+.nav-bar__link:active {
+  color: #7f0808;
+  text-shadow: none;
+  transform: translateY(-2px);
 }
 
 .btn__sign--up {
