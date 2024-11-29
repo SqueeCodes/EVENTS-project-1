@@ -18,6 +18,7 @@ const backdrop = document.querySelector(".modal__backdrop");
 openModalBtn.addEventListener("click", () => {
   modal.classList.add("modal--active");
   body.classList.add("no-scroll");
+  window.scrollTo(0, 0);
   setTimeout(() => {
     pageContent.style.visibility = "hidden";
     pageContent.style.opacity = "0";

@@ -49,8 +49,8 @@
               <a class="nav-bar__link" href="#">Login</a>
             </li>
             <li>
-              <button class="btn__sign--up">
-                <a class="nav-bar__link" href="#">Sign Up</a>
+              <button class="btn__sign--up nav-bar__link">
+                <a class="" href="#">Sign Up</a>
               </button>
             </li>
           </ul>
@@ -161,7 +161,7 @@
     </div>
 
     <!-- Contact Us Modal -->
-     <div class="modal__backdrop"></div>
+    <div class="modal__backdrop"></div>
     <div id="contactModal" class="modal">
       <div class="modal__content">
         <span id="closeModalBtn" class="close" onclick="closeModal()"
@@ -198,10 +198,18 @@
         </form>
       </div>
     </div>
-    <!-- <section class="footer">
-      <ul class="footer__links">
-        <li class="footer__link">Contact Us</li>
-      </ul>
-    </section> -->
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="footer">
+        <ul class="footer__links">
+          <a id="openModalBtn" class="footer__link" onclick="openModal()"
+            >Contact Us</a
+          >
+          <li class="footer__link">Login</li>
+          <li class="footer__link">Sign Up</li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>
