@@ -1,13 +1,29 @@
 // TOGGLE CONTRAST
 let contrastToggle = false;
+const contrastLight = document.querySelector(".contrast-light");
+const contrastDark = document.querySelector(".contrast-dark");
 
 function toggleContrast() {
   contrastToggle = !contrastToggle;
-  if (contrastToggle) {
-    document.body.classList.add("light-theme");
-  } else {
-    document.body.classList.remove("light-theme");
-  }
+  setTimeout(() => {
+    if (contrastToggle) {
+      document.body.classList.add("light-theme");
+      body.style.transition = "all 400ms ease";
+    } else {
+      document.body.classList.remove("light-theme");
+      body.style.transition = "all 400ms ease";
+    }
+  }, 80);
+
+  setTimeout(() => {
+    if (contrastToggle) {
+      contrastLight.style.visibility = "hidden";
+      contrastDark.style.visibility = "visible";
+    } else {
+      contrastLight.style.visibility = "visible";
+      contrastDark.style.visibility = "hidden";
+    }
+  }, 160);
 }
 
 // BTN MENU
