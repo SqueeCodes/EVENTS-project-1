@@ -15,9 +15,9 @@
     <title>Squee-Kitty Event-Finder</title>
   </head>
   <body>
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <div id="pageContent">
-      <!-- Navigation Section -->
+      <!-- NAVIGATION -->
       <nav id="navigation" class="container">
         <div class="nav-bar__wrapper">
           <div class="logo__wrapper">
@@ -29,7 +29,6 @@
               />
             </figure>
           </div>
-
           <ul class="nav-bar__links--list">
             <li class="link__box">
               <a class="nav-bar__link" href="#">Location</a>
@@ -53,9 +52,22 @@
                 <a class="" href="#">Sign Up</a>
               </button>
             </li>
+            <li class="link__box">
+              <div class="contrast-btns">
+                <a href="" class=""></a>
+                <i
+                  class="fa-solid fa-sun nav-bar__link contrast-light"
+                  onclick="toggleContrast()"
+                ></i>
+                <i
+                  class="fa-solid fa-moon nav-bar__link contrast-dark"
+                  onclick="toggleContrast()"
+                ></i>
+              </div>
+            </li>
           </ul>
 
-          <!-- Mobile Menu Button -->
+          <!-- MOBILE MENU BUTTON -->
           <button
             class="btn__menu"
             type="button"
@@ -65,7 +77,7 @@
             <i class="fas fa-bars"></i>
           </button>
 
-          <!-- Mobile Menu -->
+          <!-- MOBILE MENU -->
           <div class="menu__backdrop">
             <button
               class="btnmenu btnmenu--close"
@@ -118,7 +130,7 @@
         </div>
       </nav>
 
-      <!-- Search Bar and Info -->
+      <!-- SEARCH BAR & INFO -->
       <section class="page__information">
         <div class="container">
           <div class="row">
@@ -143,7 +155,7 @@
         </div>
       </section>
 
-      <!-- Shapes -->
+      <!-- SHAPES -->
       <!-- Column 1 -->
       <i class="fa-solid fa-music shape shape--0"></i>
       <i class="fa-regular fa-calendar shape shape--3"></i>
@@ -160,7 +172,7 @@
       <i class="fa-solid fa-music shape shape--8"></i>
     </div>
 
-    <!-- Contact Us Modal -->
+    <!-- CONTACT US MODAL -->
     <div class="modal__backdrop"></div>
     <div id="contactModal" class="modal">
       <div class="modal__content">
@@ -199,11 +211,12 @@
       </div>
     </div>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <section id="footer">
       <div class="footer">
         <ul class="footer__links">
-          <a href="#"
+          <a
+            href="#"
             id="openModalBtn"
             type="button"
             class="footer__link footer__modal"

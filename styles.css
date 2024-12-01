@@ -1,4 +1,4 @@
-/* Universal Styles */
+/* UNIVERSAL STYLES */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,7 +27,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* General Element Reset */
+/* GENERAL ELEMENT RESET */
 li {
   list-style: none;
 }
@@ -49,7 +49,7 @@ button {
   transition: all 400ms ease;
 }
 
-/* Containers */
+/* CONTAINERS */
 .container {
   padding: 24px auto;
   max-width: 1600px;
@@ -60,6 +60,42 @@ button {
   padding: 24px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+
+/* TOGGLE CONTRAST */
+.contrast__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contrast-light, .contrast-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.contrast-dark {
+  visibility: hidden;
+}
+
+.light-theme {
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.616),
+    #b2a7a7ae,
+    #e3d7d7 90%,
+    #af068b,
+    #f114c1
+  );
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
 }
 
 /* NAVIGATION */
@@ -225,7 +261,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* Btn Menu */
+/* BTN MENU */
 .btn__menu {
   display: none;
   background-color: transparent;
@@ -255,7 +291,7 @@ button {
   color: #f114c1;
 }
 
-/* Mobile Menu Backdrop */
+/* MOBILE MENU BACKDROP */
 .menu__backdrop {
   position: fixed;
   top: 0;
@@ -435,7 +471,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* Search Bar and Info */
+/* SEARCH BAR & INFO */
 .page__information {
   margin: 16px;
   padding: 16px;
@@ -496,7 +532,7 @@ button {
   transform: translateX(-2px);
 }
 
-/* Shapes */
+/* SHAPES */
 .shape {
   position: fixed;
   width: 28px;
@@ -573,7 +609,7 @@ button {
   color: #7f0865;
 }
 
-/* Footer */
+/* FOOTER */
 #footer {
   display: flex;
   width: 100%;
@@ -601,21 +637,7 @@ button {
 }
 
 .footer__link {
-  width: fit-content;
-  cursor: pointer;
-  margin: 24px;
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  transition: all 400ms ease;
-}
-
-.footer__link:hover {
-  color: #7f0865;
-}
-
-.footer__link {
+  font-size: 20px;
   width: fit-content;
   cursor: pointer;
   margin: 24px;
@@ -627,21 +649,23 @@ button {
 }
 
 .footer__link:hover {
-  color: #7f0865;
+  color: #f114c1;
 }
 
 .footer__link::after {
   content: "";
   position: absolute;
-  bottom: -8px;
-  left: 0;
+  bottom: -4px;
+  right: 0;
   width: 0;
   height: 2px;
-  background-color: #7f0865;
+  background-color: #f114c1;
   transition: all 400ms ease;
+  transform-origin: left;
 }
 
 .footer__link:hover::after {
+  left: 0;
   width: 100%;
   transform-origin: left;
 }
@@ -655,6 +679,10 @@ button {
   color: #7f0808;
 }
 
+.footer__link:active::after {
+  background-color: #7f0808;
+}
+
 .footer__modal {
   color: white;
 }
@@ -663,37 +691,5 @@ button {
   padding: 12px 24px 12px 24px;
 }
 
-/* Media Query */
-@media (max-width: 480px) {
-  #navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+/* MEDIA QUERIES */
 
-  .btn__menu {
-    display: block;
-    background-color: red;
-  }
-
-  .btnmenu {
-    display: block;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .menu__backdrop {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(100%);
-  }
-
-  .menulink {
-    font-size: 1.5rem;
-  }
-
-  .nav-bar__links {
-    display: none;
-  }
-}

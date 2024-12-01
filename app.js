@@ -1,4 +1,16 @@
-// Btn Menu
+// TOGGLE CONTRAST
+let contrastToggle = false;
+
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList.add("light-theme");
+  } else {
+    document.body.classList.remove("light-theme");
+  }
+}
+
+// BTN MENU
 function openMenu() {
   document.body.classList.add("menu--open");
 }
@@ -7,7 +19,7 @@ function closeMenu() {
   document.body.classList.remove("menu--open");
 }
 
-// Modal
+// MODAL
 const modal = document.getElementById("contactModal");
 const openModalBtn = document.getElementById("openModalBtn");
 const closeModalBtn = document.getElementById("closeModalBtn");
@@ -51,7 +63,7 @@ window.addEventListener("click", (event) => {
   }
 });
 
-//Shapes
+//SHAPES
 const scaleFactor = 1 / 20;
 
 function moveBackground(event) {
