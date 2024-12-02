@@ -167,6 +167,32 @@ button {
   text-shadow: none;
 }
 
+.light-theme .nav-bar__link:hover {
+  text-shadow: -16px -20px 24px black, 16px -20px 24px black,
+    -16px 20px 24px black;
+}
+
+.light-theme .icon__toggle:hover {
+  text-shadow: none;
+}
+
+.light-theme .link__box:hover::before {
+  background: linear-gradient(
+    black 0%,
+    #f59 40%,
+    #f114c1 60%,
+    #f59ae1 80%,
+    black 100%
+  );
+}
+.light-theme .link__box a:hover {
+  color: white;
+}
+
+.light-theme .link__box:hover::after {
+  background-color: #f114c1;
+}
+
 .light-theme .btn__sign--up,
 .light-theme .btn__sign--up a,
 .light-theme .search__btn {
@@ -178,11 +204,32 @@ button {
 .light-theme .btn__sign--up:hover,
 .light-theme .btn__sign--up a:hover,
 .light-theme .search__btn:hover {
-color: white;
+  color: white;
+  text-shadow: none;
+}
+
+.light-theme .search__wrapper {
+  border-color: #7f0808;
+}
+
+.light-theme .search__wrapper:hover {
+  border-color: #242424;
+}
+
+.light-theme .search__wrapper:focus-within {
+  border-color: #1a1212;
 }
 
 .light-theme .search__btn {
   background-color: transparent;
+}
+
+.light-theme .modal__content,
+.light-theme .modal__content .modal__item,
+.light-theme .modal__content .modal__label,
+.light-theme .modal__content .close {
+  background-color: #f59ae1;
+  color: black;
 }
 
 /* NAVIGATION */
@@ -303,7 +350,6 @@ color: white;
   font-size: 18px;
   font-weight: 500;
   color: #fff;
-  text-shadow: 4px 8px 8px black;
   transition: all 400ms ease;
   cursor: pointer;
 }
@@ -558,6 +604,50 @@ color: white;
   background-color: #7f0808;
   border: 2px solid transparent;
   transform: translateY(-2px);
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.modal__overlay--loading {
+  background-color: #1a1212;
+  z-index: -1;
+  font-size: 88px;
+}
+
+.modal__overlay--success {
+  background-color: #f59;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 32px;
+  z-index: -1;
+}
+
+.modal__overlay--visible {
+  z-index: 1;
+  display: flex;
+}
+
+.fa-spinner {
+  animation: spinner 800ms infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* SEARCH BAR & INFO */

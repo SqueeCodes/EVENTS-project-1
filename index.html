@@ -9,6 +9,10 @@
     ></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init("cePFoU8dvsaDAlAyz");
+    </script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700&display=swap");
     </style>
@@ -59,8 +63,7 @@
             <div class="contrast-btns">
               <a class="contrast__toggle">
                 <i
-                  class="fa-regular fa-sun nav-bar__link contrast-light
-                  icon__toggle"
+                  class="fa-regular fa-sun nav-bar__link contrast-light icon__toggle"
                   onclick="toggleContrast()"
                 ></i>
                 <i
@@ -212,6 +215,16 @@
           ></textarea>
           <button class="modal__btn" type="submit">Submit</button>
         </form>
+      </div>
+      <div class="modal__overlay modal__overlay--loading">
+        <i class="fas fa-spinner"></i>
+      </div>
+      <div class="modal__overlay modal__overlay--success">
+        Thanks for your message!<br />
+        Looking forward to speaking with you soon.
+        <span id="closeModalBtn" class="close" onclick="closeModal()"
+          >&times;</span
+        >
       </div>
     </div>
 
