@@ -467,15 +467,18 @@ button {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
   width: 100%;
-  height: 100%;
+  max-width: 400px;
   justify-content: center;
   align-items: center;
   transition: all 400ms ease;
   transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .modal--active {
@@ -515,7 +518,7 @@ button {
   width: 90%;
   padding: 24px;
   background-color: #1e1c1c;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 2px 4px 8px 12px;
 }
 
@@ -610,31 +613,46 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   display: none;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  transition: all 400ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal__overlay--loading,
+.modal__overlay--success {
+  z-index: -1;
+  text-align: center;
+  border-radius: 12px;
 }
 
 .modal__overlay--loading {
   background-color: #1a1212;
-  z-index: -1;
   font-size: 88px;
+  color: white;
 }
 
 .modal__overlay--success {
   background-color: #f59;
   font-size: 40px;
   font-weight: 700;
-  text-align: center;
   padding: 32px;
-  z-index: -1;
 }
 
 .modal__overlay--visible {
+  opacity: 1;
+  visibility: visible;
   z-index: 1;
   display: flex;
+}
+
+.modal--active + .modal__backdrop {
+  visibility: visible;
+  opacity: 1;
 }
 
 .fa-spinner {

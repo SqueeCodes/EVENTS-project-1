@@ -39,16 +39,18 @@ const closeModalBtn = document.getElementById("closeModalBtn");
 const pageContent = document.getElementById("pageContent");
 const backdrop = document.querySelector(".modal__backdrop");
 
+// Open modal
 if (openModalBtn && closeModalBtn) {
   openModalBtn.addEventListener("click", () => {
     modal.classList.add("modal--active");
+    backdrop.classList.add("modal__backdrop--visible");
+    backdrop.style.visibility = "visible";
+    backdrop.style.opacity = "1";
     body.classList.add("no-scroll");
     window.scrollTo(0, 0);
     setTimeout(() => {
       pageContent.style.visibility = "hidden";
       pageContent.style.opacity = "0";
-      backdrop.style.visibility = "visible";
-      backdrop.style.opacity = "1";
     }, 80);
   });
 
@@ -57,7 +59,7 @@ if (openModalBtn && closeModalBtn) {
   });
 
   window.addEventListener("click", (event) => {
-    if (event.target === modal) {
+    if (event.target === modal || event.target === backdrop) {
       closeModal();
     }
   });
@@ -65,12 +67,13 @@ if (openModalBtn && closeModalBtn) {
 
 function closeModal() {
   modal.classList.remove("modal--active");
+  backdrop.classList.remove("modal__backdrop--visible");
+  backdrop.style.visibility = "hidden";
+  backdrop.style.opacity = "0";
   body.classList.remove("no-scroll");
   setTimeout(() => {
     pageContent.style.visibility = "visible";
     pageContent.style.opacity = "1";
-    backdrop.style.visibility = "hidden";
-    backdrop.style.opacity = "0";
   }, 600);
 }
 
@@ -81,7 +84,8 @@ function contact(event) {
   const loading = document.querySelector(".modal__overlay--loading");
   const success = document.querySelector(".modal__overlay--success");
 
-  loading.classList += " modal__overlay--visible";
+  // Show loading overlay
+  loading.classList.add("modal__overlay--visible");
 
   emailjs
     .sendForm(
@@ -93,17 +97,17 @@ function contact(event) {
     .then(() => {
       setTimeout(() => {
         loading.classList.remove("modal__overlay--visible");
-        success.classList += " modal__overlay--visible";
-      }).catch(() => {
-        loading.classList.remove("modal__overlay--visible");
-        alert(
-          "The email service is temporarily unavailable. Apologies, please contact me directly at mainnella@gmail.com."
-        );
-      });
-      loading.classList += " modal__overlay--visible";
-      console.log("it worked");
-    }, 1000);
+        success.classList.add("modal__overlay--visible"); // Show success overlay
+      }, 1000);
+    })
+    .catch(() => {
+      loading.classList.remove("modal__overlay--visible");
+      alert(
+        "The email service is temporarily unavailable. Apologies, please contact me directly at mainnella@gmail.com."
+      );
+    });
 }
+
 // SHAPES
 const scaleFactor = 1 / 20;
 

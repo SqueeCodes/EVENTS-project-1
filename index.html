@@ -188,7 +188,7 @@
         >
         <h2 class="modal__title">Contact Us</h2>
         <p class="modal__para">We want to hear from you!</p>
-        <form id="contactForm" class="modal__form">
+        <form id="contactForm" class="modal__form" onsubmit="contact(event)">
           <label for="name" class="modal__label">Name</label>
           <input
             id="name"
@@ -210,21 +210,23 @@
             id="message"
             name="message"
             rows="5"
-            required
             class="modal__item modal__item--textbox"
+            required
           ></textarea>
           <button class="modal__btn" type="submit">Submit</button>
         </form>
-      </div>
-      <div class="modal__overlay modal__overlay--loading">
-        <i class="fas fa-spinner"></i>
-      </div>
-      <div class="modal__overlay modal__overlay--success">
-        Thanks for your message!<br />
-        Looking forward to speaking with you soon.
-        <span id="closeModalBtn" class="close" onclick="closeModal()"
-          >&times;</span
-        >
+
+        <!-- Loading Overlay -->
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner fa-spin"></i>
+        </div>
+
+        <!-- Success Overlay -->
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for your message!<br />
+          Looking forward to speaking with you soon.
+          <span class="close" onclick="closeModal()">&times;</span>
+        </div>
       </div>
     </div>
 
